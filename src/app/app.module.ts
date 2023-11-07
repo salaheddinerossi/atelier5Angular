@@ -9,13 +9,19 @@ import {HttpClientModule} from "@angular/common/http";
 import {RouterModule} from "@angular/router";
 import { CreateStationComponent } from './Components/create-station/create-station.component';
 import { UpdateStationComponent } from './Components/update-station/update-station.component';
+import { CreateCarburantComponent } from './Components/create-carburant/create-carburant.component';
+import { CarburantListComponent } from './Components/carburant-list/carburant-list.component';
+import { UpdateCarburantComponent } from './Components/update-carburant/update-carburant.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StationListComponent,
     CreateStationComponent,
-    UpdateStationComponent
+    UpdateStationComponent,
+    CreateCarburantComponent,
+    CarburantListComponent,
+    UpdateCarburantComponent
   ],
   imports: [
     BrowserModule,

@@ -16,16 +16,17 @@ export class UpdateStationComponent implements OnInit{
     addresse:"",
     ville:""
   }
-
   constructor(private stationService:StationService,private route:ActivatedRoute,private router:Router) {
   }
 
-  ngOnInit() {
+
+    ngOnInit() {
     let id = this.route.snapshot.paramMap.get("id")
       console.log(id)
     if (id){
       this.stationService.getStation(id).subscribe(
           staion =>{
+
             this.station=staion
           },error => {
             console.error("error : " + error)
@@ -38,7 +39,7 @@ export class UpdateStationComponent implements OnInit{
     this.stationService.editStation(this.station).subscribe(
         () => {
 
-          this.router.navigate(["/station"])
+          this.router.navigate(["/staion"])
         },error =>
         {
           console.error("error : " + error)

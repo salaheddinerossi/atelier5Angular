@@ -1,0 +1,18 @@
+<div class="max-w-2xl mx-auto py-6">
+    <h2 class="text-2xl font-semibold leading-tight text-gray-800">Modifier la carburant</h2>
+    <form #caburantForm="ngForm" (ngSubmit)="updateCarburant()" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mt-4">
+        <div class="mb-4">
+            <label for="nom" class="block text-gray-700 text-sm font-bold mb-2">Nom:</label>
+            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nom" [(ngModel)]="carburant.nom" name="nom" required>
+        </div>
+        <div class="mb-4">
+            <label for="desciption" class="block text-gray-700 text-sm font-bold mb-2">desciption:</label>
+            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="desciption" [(ngModel)]="carburant.description" name="desciption" required>
+        </div>
+        <input type="hidden" [(ngModel)]="carburant.id" name="id">
+        <div class="flex items-center justify-between">
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" [disabled]="caburantForm.invalid">Modifier</button>
+            <button type="button" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" (click)="cancel()">Annuler</button>
+        </div>
+    </form>
+</div>
