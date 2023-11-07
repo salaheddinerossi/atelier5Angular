@@ -6,6 +6,9 @@ import {UpdateStationComponent} from "./Components/update-station/update-station
 import {CarburantListComponent} from "./Components/carburant-list/carburant-list.component";
 import {CreateCarburantComponent} from "./Components/create-carburant/create-carburant.component";
 import {UpdateCarburantComponent} from "./Components/update-carburant/update-carburant.component";
+import {HistocarbListComponent} from "./Components/histocarb-list/histocarb-list.component";
+import {CreateHistocarbComponent} from "./Components/create-histocarb/create-histocarb.component";
+import {UpdateHistocarbComponent} from "./Components/update-histocarb/update-histocarb.component";
 
 const routes: Routes = [
   {path:"station",component:StationListComponent},
@@ -13,7 +16,10 @@ const routes: Routes = [
   {path:"update-station/:id",component:UpdateStationComponent},
   {path:"carburant",component:CarburantListComponent},
   {path:"add-carburant",component:CreateCarburantComponent},
-  {path:"update-carburant/:id",component:UpdateCarburantComponent}
+  {path:"update-carburant/:id",component:UpdateCarburantComponent},
+  {path:"histocarb",component:HistocarbListComponent},
+  {path:"add-histocarb",component:CreateHistocarbComponent},
+  {path:"update-histocarb/:id",component:UpdateHistocarbComponent}
 ];
 
 @NgModule({

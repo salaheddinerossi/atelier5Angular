@@ -1,0 +1,40 @@
+<div class="container mx-auto p-6">
+    <!-- Heading and Add button -->
+    <div class="flex justify-between items-center mb-4">
+        <h1 class="text-3xl font-bold text-gray-800">histocarbs</h1>
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition duration-300 ease-in-out transform hover:-translate-y-1" routerLink="/add-histocarb">
+            Add Histocarb
+        </button>
+    </div>
+    <div class="bg-white shadow overflow-hidden rounded border-b border-gray-200">
+        <table class="min-w-full bg-white">
+            <thead class="bg-gray-800 text-white">
+            <tr>
+                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">ID</th>
+                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">prix</th>
+                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">date</th>
+                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">station</th>
+                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">carburant </th>
+                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Actions</th>
+            </tr>
+            </thead>
+            <tbody class="text-gray-700">
+            <tr *ngFor="let histocarb of histocarbs" class="hover:bg-gray-50">
+                <td class="py-2 px-4 border-b border-gray-200">{{ histocarb.id }}</td>
+                <td class="py-2 px-4 border-b border-gray-200">{{ histocarb.prix }}</td>
+                <td class="py-2 px-4 border-b border-gray-200">{{ histocarb.date }}</td>
+                <td class="py-2 px-4 border-b border-gray-200">{{ histocarb.station.nom }}</td>
+                <td class="py-2 px-4 border-b border-gray-200">{{ histocarb.carburant.nom }}</td>
+                <td class="py-2 px-4 border-b border-gray-200 flex ">
+                    <button class="text-indigo-600 hover:text-indigo-900 mr-2" [routerLink]="['/update-histocarb/'+histocarb.id]">
+                        Edit
+                    </button>
+                    <button class="text-red-600 hover:text-red-900" (click)="deleteHistocarb(histocarb.id)">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

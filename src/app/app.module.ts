@@ -12,6 +12,10 @@ import { UpdateStationComponent } from './Components/update-station/update-stati
 import { CreateCarburantComponent } from './Components/create-carburant/create-carburant.component';
 import { CarburantListComponent } from './Components/carburant-list/carburant-list.component';
 import { UpdateCarburantComponent } from './Components/update-carburant/update-carburant.component';
+import { UpdateHistocarbComponent } from './Components/update-histocarb/update-histocarb.component';
+import { HistocarbListComponent } from './Components/histocarb-list/histocarb-list.component';
+import { CreateHistocarbComponent } from './Components/create-histocarb/create-histocarb.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { UpdateCarburantComponent } from './Components/update-carburant/update-c
     UpdateStationComponent,
     CreateCarburantComponent,
     CarburantListComponent,
-    UpdateCarburantComponent
+    UpdateCarburantComponent,
+    UpdateHistocarbComponent,
+    HistocarbListComponent,
+    CreateHistocarbComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
