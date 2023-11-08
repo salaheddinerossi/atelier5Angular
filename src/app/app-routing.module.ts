@@ -19,7 +19,8 @@ const routes: Routes = [
   {path:"update-carburant/:id",component:UpdateCarburantComponent},
   {path:"histocarb",component:HistocarbListComponent},
   {path:"add-histocarb",component:CreateHistocarbComponent},
-  {path:"update-histocarb/:id",component:UpdateHistocarbComponent}
+  {path:"update-histocarb/:id",component:UpdateHistocarbComponent},
+  {path:"",component:StationListComponent}
 ];
 
 @NgModule({
